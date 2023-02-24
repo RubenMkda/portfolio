@@ -1,14 +1,10 @@
-import gif from '../img/portfolio.gif'
-
 const Card = (props) => {
-
-    console.log(props.info)
 
     return(
         <>
             <h3 className='tittle3'>{props.info.tittle}</h3>
             <article className='card'>
-                <a href="#" className='link'>
+                <a href={props.info.url} className='link' target='_blank'>
                     <img src={props.info.img} className='gif'/>
                 </a>
                 <div className='container-work'>

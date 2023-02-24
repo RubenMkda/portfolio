@@ -1,6 +1,7 @@
 import facebook from './img/icon/facebook.svg'
 import what from './img/icon/whatsapp.svg'
 import discord from './img/icon/discord.svg'
+import github from './img/icon/github.svg'
 
 const Footer = () => {
 
@@ -27,7 +28,14 @@ const Footer = () => {
                             <img src={discord} />
                         </a>
                     </button>
-                    </li>
+                </li>
+                <li>
+                    <button className='socialbtn' >
+                        <a href="https://github.com/RubenMkda" target='_blank'>
+                            <img src={github} />
+                        </a>
+                    </button>
+                </li>
             </ul>
         )
     }

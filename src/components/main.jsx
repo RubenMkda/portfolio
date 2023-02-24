@@ -1,3 +1,4 @@
+import icon from './img/icon/icon.jpeg'
 import html from './img/icon/HTML.png'
 import css from './img/icon/CSS3_logo.png'
 import py from './img/icon/Python.png'
@@ -12,6 +13,7 @@ import py3d from './img/3d/python-3d.png'
 import psql3d from './img/3d/psql-3d.png'
 import Card from './sub/Card'
 import gif from './img/portfolio.gif'
+import agenda from './img/agenda.png'
 
 
 const Main = () => {
@@ -20,25 +22,35 @@ const Main = () => {
         img: gif,
         frontEnd: 'UI-Frontend: React, javaScript',
         backEnd: 'API-Backend: Python, Flask, Postgresql',
-        tittle: 'Portfolio-landing page'
+        tittle: 'Portfolio-landing page',
+        url: '#'
+    }
+
+    const agenda_1 = {
+        img: agenda,
+        frontEnd: 'UI: JavaScript-vanilla',
+        backEnd: 'API: python, Flask, Postgresql',
+        tittle: 'Agenda ',
+        url: 'https://ruben-agenda.netlify.app'
     }
     
     return(
         <main>
             <div className='main-container'>
                 <div>
-                    <img src={html}/>
+                    <img src={icon} className='icon' />
                 </div>
                 <article className='container'>
                     <h2>¡Si lo puedes imaginar, lo puedes programar!</h2>
-                    <p>Resumiendo mi trabajo, soy programador fullstack, dedico mi tiempo como mi conocimiento a la disposición de empresas y emprededores que desean mejorar tanto sus ventas como su imagen, mis habilidades son el desarrllo web, la automatización de tareas, y el marketing digital.</p>
+                    <p>Resumiendo mi trabajo, soy programador fullstack, dedico mi tiempo como mi conocimiento a la disposición de empresas y emprendedores que desean mejorar tanto sus ventas como su imagen, mis habilidades son el desarrollo web, la automatización de tareas, y el marketing digital.
+</p>
                 </article>
             </div>
             <Technologies />
             <div className='proyectos'>
-                    <h2>Proyectos</h2>
+                    <h2>Proyectos.</h2>
                     <Card info={music_player} />
-                    <Card info={music_player} />
+                    <Card info={agenda_1} />
             </div>
         </main>
     )
@@ -93,7 +105,7 @@ const Technologies = () => {
     return(
         <div className="view3d">
             <article className='tech-container'>
-                <h2>Tecnologías</h2>
+                <h2>Tecnologías.</h2>
                 <Buttons />          
             </article>
                 <div>
