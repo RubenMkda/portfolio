@@ -1,0 +1,339 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+@font-face {
+  font-family: 'mabookregular';
+  src: url('fonts/mabook-webfont.woff2') format('woff2'),
+       url('fonts/mabook-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ---------------- Burger menu ------------------ */
+
+.burger-menu{
+  height: 100%;
+  width: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 2px;
+  display: none;
+}
+
+.burger-bar{
+  width: 2em;
+  height: 0.6em;
+  background-color: #003F7A;
+  border-radius: 1em;
+}
+
+.menu{
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+  background-color: #003F7A;
+  position: absolute;
+  transition: all ease 0.5s;
+  right: -60%;
+  top: 4.5em;
+  z-index: -1;
+}
+
+.menu ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.menu li{
+  margin: 3.5em;
+}
+
+.menu a{
+  -webkit-text-fill-color: white;
+}
+
+.main-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.proyetos{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container div::before{
+  content: '';
+  position: absolute;
+  display: block;
+  margin-top: 0em;
+  z-index: -1;
+  background-color: #0159aa;
+  box-shadow: 0 0 0 0.5em #006bcf,
+              0 0 0 1.0em #0084ff,
+              0 0 0 1.5em #2494fd,
+              0 0 0 2.0em #4da8fd;
+  border-radius: 60q;
+  width: 7em;
+  height: 7em;
+}
+
+.main-container img{
+  padding: 1em;
+  padding-top: 1.3em;
+  margin: 0;
+}
+
+
+.container{
+  width: 50%;
+  padding: 0 0.5em 0.5em 0.5em;
+}
+
+.tech-container{
+  padding-bottom: 2em;
+  height: 50%;
+  width: 50%;
+  box-shadow: #003F7A 0px 5px 20px 0px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2em;
+}
+
+.tech-container h2{
+  margin: 0.6em;
+}
+
+.techbtn{
+  padding: 0;
+  margin: 0.1em;
+  padding-top: 0.5em;
+  background-size: cover;
+}
+
+.tech3d{
+  margin: 0;
+  width: 10em;
+  height: 10em;
+}
+
+.tech-tittle{
+  text-transform: uppercase;
+  padding: 0.8em;
+  margin-top: -1em;
+  background-color: whitesmoke;
+  box-shadow: rgba(61, 171, 255, 0.5) 0px 5px 20px 0px;
+  border-radius: 10q;
+}
+
+.view3d{
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;  
+  border-radius: 10q;
+  margin-top: -0.7em;
+}
+
+.view3d div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.view3d div::after{
+  content: '';
+  position: relative;
+  display: block;
+  z-index: -1;
+  margin-top: -13.5em;
+  box-shadow: 0 0 0 0.7em #003F7A,
+              0 0 0 1.4em #0461b8;
+  border-radius: 60q;
+  width: 11em;
+  height: 11em;
+  animation: rotation 30s infinite linear;
+}
+
+.view3d div img{
+  padding: 0;
+  margin: 0;
+  width: 10em;
+  height: 10em;
+}
+
+/* ------------- hidding menu ------------------ */
+
+.hidden{
+  transition: ease-out 0.4s;
+}
+
+.visible{
+  right: 0;
+  transition: ease-out 0.4s;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1){
+  transform: rotate(45deg) translate(0.6em, 0.34em);
+  transition: ease-out 0.2s;
+}
+
+.burger-bar.clicked:nth-child(2){
+  transform: scale(0.1);
+  transition: ease-out 0.2s;
+}
+
+.burger-bar.clicked:nth-child(3){
+  transform: rotate(135deg) translate(-.6em, 0.5em);
+  transition: ease-out 0.2s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 1.5em;
+}
+
+.cardimg{
+  width: 46em;
+  height: 8em;
+}
+.tittle3{
+  margin-right: 0em;
+  margin-bottom: -0.7em;
+  font-family: 'mabookregular';
+}
+
+.gif{
+  width: 46em;
+  height: 15em;
+  margin-top: 2em;
+  padding: 0;
+  border-radius: 1em;
+}
+.link{
+  padding:0;
+}
+.link:hover{
+  transform: none;
+}
+
+.container-work{
+  display: flex;
+  flex-direction: column;
+}
+
+.work{
+  box-shadow: #003F7A 0px 5px 20px 0px;
+  font-family: 'mabookregular';
+  display: inline-block;
+  text-align: center;
+}
+
+.socialbtn{
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialbtn img{
+  padding: 0;
+  margin: 0;
+  width: 4em;
+  height: 4em;
+}
+
+.socialbtn:hover{
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.footer-links li a{
+  -webkit-text-fill-color: whitesmoke;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@media only screen and (max-width: 768px){
+  .navlinks{
+    display: none;
+  }
+  .burger-menu{
+    display: inherit;
+  }
+  .main-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .main-container div::before{
+    margin-top: 1em;
+  }
+  .main-container img{
+    margin-top: 1em;
+  }
+  .container{
+    width: 80%;
+  }
+  .tech-container{
+    width: 70%;
+    padding: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
+  .view3d{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2em;
+  }
+  .view3d div{
+    margin-top: 0rem;
+  }
+}
+
+@media only screen and (min-width: 769px){
+  .menu{
+    display: none;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
