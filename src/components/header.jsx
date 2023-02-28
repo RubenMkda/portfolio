@@ -40,8 +40,8 @@ export const NavLinks = (props) => {
     return(
         <ul className={props.name} >
             <li><a href="#" onClick={props.onClick}>Sobre mí</a></li>
-            <li><a href="#" onClick={props.onClick}>Redes</a></li>
-            <li><a href="#" onClick={props.onClick}>Proyectos</a></li>
+            <li><a href="#Tecnologias" onClick={props.onClick}>Tecnologìas</a></li>
+            <li><a href="#proyectos" onClick={props.onClick}>Proyectos</a></li>
         </ul>
     )
 }

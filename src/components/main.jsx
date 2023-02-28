@@ -41,14 +41,14 @@ const Main = () => {
                     <img src={icon} className='icon' />
                 </div>
                 <article className='container'>
-                    <h2>¡Si lo puedes imaginar, lo puedes programar!</h2>
+                    <h2 id='Tecnologias'>¡Si lo puedes imaginar, lo puedes programar!</h2>
                     <p>Resumiendo mi trabajo, soy programador fullstack, dedico mi tiempo como mi conocimiento a la disposición de empresas y emprendedores que desean mejorar tanto sus ventas como su imagen, mis habilidades son el desarrollo web, la automatización de tareas, y el marketing digital.
-</p>
+                    </p>
                 </article>
             </div>
             <Technologies />
             <div className='proyectos'>
-                    <h2>Proyectos.</h2>
+                    <h2 id='proyectos'>Proyectos.</h2>
                     <Card info={music_player} />
                     <Card info={agenda_1} />
             </div>
@@ -105,7 +105,7 @@ const Technologies = () => {
     return(
         <div className="view3d">
             <article className='tech-container'>
-                <h2>Tecnologías.</h2>
+                <h2>Tecnologías</h2>
                 <Buttons />          
             </article>
                 <div>
